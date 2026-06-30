@@ -1,78 +1,156 @@
-# Sistem Informasi Manajemen E-Waste ♻️
+# ♻️ E-Waste Management Information System
 
-Aplikasi berbasis web ini dikembangkan sebagai *project* Skripsi untuk memfasilitasi pengelolaan limbah elektronik (E-Waste). Platform ini menghubungkan masyarakat (pelanggan) yang ingin membuang limbah elektronik dengan pengepul (*collector*) secara efisien dan terstruktur.
-
-## 🚀 Fitur Utama
-
-- **Otentikasi Pengguna:** Sistem Login dan Register terpisah untuk *Customer* dan *Collector*.
-- **Customer Dashboard:** Pengguna dapat mengajukan permintaan penjemputan limbah elektronik (*submit e-waste*) dan melacak status penjemputan.
-- **Collector Dashboard:** Pengepul dapat melihat permintaan penjemputan, memantau lokasi pelanggan, dan mengelola laporan.
-- **Integrasi Peta:** Menggunakan Leaflet.js untuk memetakan lokasi penjemputan secara akurat.
-
-## 🛠️ Teknologi yang Digunakan
-
-- **Framework:** [Next.js](https://nextjs.org/) (App Router)
-- **Database ORM:** [Prisma](https://www.prisma.io/) (SQLite untuk mode *development*)
-- **Maps:** Leaflet.js
-- **Styling:** CSS / Tailwind (Global CSS)
-
-## 💻 Cara Menjalankan Project (Development)
-
-Untuk menjalankan *project* ini di komputer lokal, pastikan Anda sudah menginstal **Node.js** dan **Git**.
-
-1. **Clone Repository**
-   ```bash
-   git clone [https://github.com/AggiSaputra/e-waste.git](https://github.com/AggiSaputra/e-waste.git)
-   cd e-waste
-
-```
-
-2. **Install Dependencies**
-```bash
-npm install
-
-```
-
-
-3. **Konfigurasi Environment**
-Buat file `.env` di *root directory* (jika belum ada) dan sesuaikan konfigurasi database Anda.
-4. **Migrasi Database (Prisma)**
-Jalankan perintah ini untuk menyinkronkan skema database:
-```bash
-npx prisma migrate dev
-
-```
-
-
-5. **Jalankan Development Server**
-```bash
-npm run dev
-
-```
-
-
-6. **Akses Aplikasi**
-Buka [http://localhost:3000](http://localhost:3000) di *browser* Anda untuk melihat hasilnya.
-
-## 📁 Struktur Direktori Utama
-
-* `/app` - Berisi *routing* utama Next.js (halaman Customer, Collector, Auth, dll).
-* `/components` - Komponen UI yang dapat digunakan kembali (termasuk komponen MapInternal & LeafletMap).
-* `/prisma` - Skema database dan file migrasi.
-* `/lib` - Utilitas pendukung dan konfigurasi Prisma *client*.
-* `/context` - *State management* global (seperti AuthContext).
-
-## 🔒 Pernyataan Ketersediaan Data (Open Data Declaration)
-
-Kode sumber untuk sistem informasi ini tersedia secara publik di repository GitHub ini. Namun, data penelitian yang dikumpulkan dan diproses dalam sistem ini (seperti data demografi pengguna, alamat detail lokasi penjemputan limbah, dan riwayat transaksi) bersifat **sensitif dan rahasia**.
-
-Untuk menjaga privasi pengguna sesuai dengan pedoman dan etika penelitian, dataset asli tidak dapat disebarluaskan atau dipublikasikan secara terbuka. Pihak yang berkepentingan dan memiliki alasan akademis yang sah dapat memohon akses data terbatas dengan menghubungi peneliti utama secara langsung.
+A web-based information system developed as an undergraduate thesis project to facilitate the management of electronic waste (E-Waste). The platform connects customers who want to dispose of electronic waste with collectors, making the collection process more efficient, organized, and traceable.
 
 ---
 
-**Dikembangkan oleh:** Aggi Saputra
-*Dibuat untuk memenuhi persyaratan penyelesaian Skripsi.*
+## 🚀 Features
 
+### 👤 Authentication
+
+* Separate login and registration for **Customer** and **Collector**.
+* Secure user authentication and role-based access.
+
+### 📦 Customer Dashboard
+
+* Submit electronic waste pickup requests.
+* Track pickup request status.
+* View request history.
+
+### 🚛 Collector Dashboard
+
+* View incoming pickup requests.
+* Monitor customer pickup locations.
+* Manage collection reports.
+
+### 🗺️ Interactive Maps
+
+* Integration with **Leaflet.js** for accurate pickup location mapping.
+* Real-time location visualization.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology       | Description          |
+| ---------------- | -------------------- |
+| **Framework**    | Next.js (App Router) |
+| **Database ORM** | Prisma ORM           |
+| **Database**     | SQLite (Development) |
+| **Maps**         | Leaflet.js           |
+| **Styling**      | CSS & Tailwind CSS   |
+
+---
+
+## 📦 Installation
+
+Make sure the following software is installed on your machine:
+
+* Node.js
+* Git
+* npm
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AggiSaputra/e-waste.git
+cd e-waste
 ```
 
+### 2. Install Dependencies
+
+```bash
+npm install
 ```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the project root and configure the required environment variables.
+
+Example:
+
+```env
+DATABASE_URL="file:./dev.db"
+```
+
+### 4. Run Prisma Migration
+
+```bash
+npx prisma migrate dev
+```
+
+### 5. Start the Development Server
+
+```bash
+npm run dev
+```
+
+### 6. Open the Application
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+.
+├── app/            # Next.js App Router pages
+├── components/     # Reusable UI components
+├── context/        # Global state management
+├── lib/            # Utility functions & Prisma client
+├── prisma/         # Database schema & migrations
+├── public/         # Static assets
+└── README.md
+```
+
+### Directory Description
+
+| Directory     | Description                                                         |
+| ------------- | ------------------------------------------------------------------- |
+| `app/`        | Main application routes (Customer, Collector, Authentication, etc.) |
+| `components/` | Reusable UI components including map components                     |
+| `context/`    | Global state management (e.g., AuthContext)                         |
+| `lib/`        | Utility functions and Prisma configuration                          |
+| `prisma/`     | Prisma schema and migration files                                   |
+| `public/`     | Static assets such as images and icons                              |
+
+---
+
+## 🗺️ Map Integration
+
+This application uses **Leaflet.js** to:
+
+* Display customer pickup locations.
+* Help collectors navigate to pickup points.
+* Improve waste collection efficiency.
+
+---
+
+## 🔒 Open Data Declaration
+
+The source code of this system is publicly available in this GitHub repository.
+
+However, the research data processed within the application—including user demographic information, detailed pickup addresses, and transaction history—contains **confidential and sensitive information**.
+
+To protect participant privacy and comply with research ethics, the original dataset cannot be publicly distributed. Researchers with legitimate academic purposes may request limited access to the data by contacting the principal researcher.
+
+---
+
+## 📄 License
+
+This repository is intended for academic and research purposes.
+
+Please respect the author's intellectual property and cite this work appropriately when using it in research or educational activities.
+
+---
+
+## 👨‍💻 Author
+
+**Aggi Saputra**
+
+Developed as part of the undergraduate thesis requirements.
