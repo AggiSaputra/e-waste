@@ -143,10 +143,9 @@ To protect participant privacy and comply with research ethics, the original dat
 
 ## 📄 License
 
-This repository is intended for academic and research purposes.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-Please respect the author's intellectual property and cite this work appropriately when using it in research or educational activities.
-
+> **Note:** The source code is released under the MIT License. However, the research dataset used in this project is **not** included in this repository and remains confidential due to research ethics and privacy considerations.
 ---
 
 ## 👨‍💻 Author
