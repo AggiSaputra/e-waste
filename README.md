@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sistem Informasi Manajemen E-Waste ♻️
 
-## Getting Started
+Aplikasi berbasis web ini dikembangkan sebagai *project* Skripsi untuk memfasilitasi pengelolaan limbah elektronik (E-Waste). Platform ini menghubungkan masyarakat (pelanggan) yang ingin membuang limbah elektronik dengan pengepul (*collector*) secara efisien dan terstruktur.
 
-First, run the development server:
+## 🚀 Fitur Utama
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Otentikasi Pengguna:** Sistem Login dan Register terpisah untuk *Customer* dan *Collector*.
+- **Customer Dashboard:** Pengguna dapat mengajukan permintaan penjemputan limbah elektronik (*submit e-waste*) dan melacak status penjemputan.
+- **Collector Dashboard:** Pengepul dapat melihat permintaan penjemputan, memantau lokasi pelanggan, dan mengelola laporan.
+- **Integrasi Peta:** Menggunakan Leaflet.js untuk memetakan lokasi penjemputan secara akurat.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Teknologi yang Digunakan
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Database ORM:** [Prisma](https://www.prisma.io/) (SQLite untuk mode *development*)
+- **Maps:** Leaflet.js
+- **Styling:** CSS / Tailwind (Global CSS)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Cara Menjalankan Project (Development)
 
-## Learn More
+Untuk menjalankan *project* ini di komputer lokal, pastikan Anda sudah menginstal **Node.js** dan **Git**.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone Repository**
+   ```bash
+   git clone [https://github.com/AggiSaputra/e-waste.git](https://github.com/AggiSaputra/e-waste.git)
+   cd e-waste
