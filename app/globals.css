@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* ============================= */
+/* 🌿 ECYCLE DESIGN SYSTEM */
+/* ============================= */
+
+:root {
+  --color-primary: #16A34A;
+  --color-primary-dark: #15803D;
+  --color-primary-light: #DCFCE7;
+
+  --color-background: #F8FAF9;
+  --color-card: #FFFFFF;
+  --color-border: #E5E7EB;
+
+  --color-text-main: #1F2937;
+  --color-text-muted: #6B7280;
+}
+
+/* ============================= */
+/* BASE STYLE */
+/* ============================= */
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-main);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+
+.container-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.button-primary:active {
+  transform: translateY(0);
+}
+
+.button-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ============================= */
+/* INPUT */
+/* ============================= */
+
+.input-theme {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.input-theme:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.table-theme {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header */
+.table-theme th {
+  text-align: left;
+  padding: 16px 0;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Row */
+.table-theme td {
+  padding: 18px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #F3F4F6;
+  color: var(--color-text-main);
+}
+
+/* Hover Effect */
+.table-theme tbody tr {
+  transition: 0.2s ease;
+}
+
+.table-theme tbody tr:hover {
+  background-color: #F9FAFB;
+}
+
+/* ============================= */
+/* BADGE */
+/* ============================= */
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-success {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+.badge-warning {
+  background: #FEF9C3;
+  color: #B45309;
+}
+
+.badge-info {
+  background: #DBEAFE;
+  color: #1D4ED8;
+}
+
+.badge-default {
+  background: #F3F4F6;
+  color: #6B7280;
+}
